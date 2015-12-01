@@ -4,6 +4,7 @@
   "description": "A set of plugins for responsive tables.",
   "version": "2.0.2",
   "homepage": "https://github.com/filamentgroup/tablesaw",
+  "main": "dist/tablesaw.js",
   "author": {
     "name": "Zach Leatherman",
     "company": "Filament Group",
