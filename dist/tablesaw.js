@@ -1,6 +1,24 @@
-/*! Tablesaw - v2.0.2 - 2015-10-28
+/*! Tablesaw - v2.0.2 - 2015-12-01
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2015 Filament Group; Licensed  */
+// UMD module definition
+// From: https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js
+
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // Node/CommonJS
+    module.exports = factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function (jQuery) {
+
+  var Tablesaw, win = typeof window !== "undefined" ? window : this;
+
 /*
 * tablesaw: A set of plugins for responsive tables
 * Stack and Column Toggle tables
@@ -204,7 +222,7 @@ if( Tablesaw.mustard ) {
 		// get headers in reverse order so that top-level headers are appended last
 		var reverseHeaders = $( this.allHeaders );
 		var hideempty = this.hideempty;
-		
+
 		// create the hide/show toggles
 		reverseHeaders.each(function(){
 			var $t = $( this ),
@@ -258,7 +276,7 @@ if( Tablesaw.mustard ) {
 
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));
 ;(function( $ ) {
 	var pluginName = "tablesawbtn",
 		methods = {
@@ -522,7 +540,7 @@ if( Tablesaw.mustard ) {
 		}
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));
 ;(function( win, $, undefined ){
 
 	$.extend( Tablesaw.config, {
@@ -832,7 +850,7 @@ if( Tablesaw.mustard ) {
 
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));
 
 ;(function( $ ) {
 	function getSortValue( cell ) {
@@ -1186,7 +1204,7 @@ if( Tablesaw.mustard ) {
 
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));
 
 ;(function( win, $ ) {
 
@@ -1263,4 +1281,6 @@ if( Tablesaw.mustard ) {
 		}
 	});
 
-})( this, jQuery );
+})( win, jQuery );
+
+}));

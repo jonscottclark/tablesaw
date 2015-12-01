@@ -314,4 +314,4 @@
 
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));

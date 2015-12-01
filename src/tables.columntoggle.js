@@ -190,4 +190,4 @@
 		}
 	} );
 
-}( this, jQuery ));
+}( win, jQuery ));
