@@ -253,6 +253,7 @@
 				rows = el[ pluginName ]( "sortRows" , rows , colNum , ascending, col );
 				el[ pluginName ]( "replaceTableRows" , rows );
 				el[ pluginName ]( "makeColDefault" , col , ascending );
+				el.trigger( "complete." + pluginName );
 			}
 		};
 
