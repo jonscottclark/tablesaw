@@ -1,4 +1,4 @@
-/*! Tablesaw - v2.0.2 - 2015-12-01
+/*! Tablesaw - v2.0.2 - 2015-12-03
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2015 Filament Group; Licensed  */
 // UMD module definition
@@ -1100,6 +1100,7 @@ if( Tablesaw.mustard ) {
 				rows = el[ pluginName ]( "sortRows" , rows , colNum , ascending, col );
 				el[ pluginName ]( "replaceTableRows" , rows );
 				el[ pluginName ]( "makeColDefault" , col , ascending );
+				el.trigger( "complete." + pluginName );
 			}
 		};
 
